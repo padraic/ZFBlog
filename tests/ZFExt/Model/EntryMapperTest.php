@@ -84,10 +84,10 @@ class ZFExt_Model_EntryMapperTest extends PHPUnit_Framework_TestCase
         );
         $this->_adapter->expects($this->once())
             ->method('quoteInto')
-            ->will($this->returnValue('entry_id = 1'));
+            ->will($this->returnValue('id = 1'));
         $this->_tableGateway->expects($this->once())
             ->method('update')
-            ->with($this->equalTo($updateData), $this->equalTo('entry_id = 1'));
+            ->with($this->equalTo($updateData), $this->equalTo('id = 1'));
 
         $this->_mapper->save($entry);
     }
@@ -158,11 +158,11 @@ class ZFExt_Model_EntryMapperTest extends PHPUnit_Framework_TestCase
     {
         $this->_adapter->expects($this->once())
             ->method('quoteInto')
-            ->with($this->equalTo('entry_id = ?'), $this->equalTo(1))
-            ->will($this->returnValue('entry_id = 1'));
+            ->with($this->equalTo('id = ?'), $this->equalTo(1))
+            ->will($this->returnValue('id = 1'));
         $this->_tableGateway->expects($this->once())
             ->method('delete')
-            ->with($this->equalTo('entry_id = 1'));
+            ->with($this->equalTo('id = 1'));
         $this->_mapper->delete(1);
     }
 
@@ -185,11 +185,11 @@ class ZFExt_Model_EntryMapperTest extends PHPUnit_Framework_TestCase
 
         $this->_adapter->expects($this->once())
             ->method('quoteInto')
-            ->with($this->equalTo('entry_id = ?'), $this->equalTo(1))
-            ->will($this->returnValue('entry_id = 1'));
+            ->with($this->equalTo('id = ?'), $this->equalTo(1))
+            ->will($this->returnValue('id = 1'));
         $this->_tableGateway->expects($this->once())
             ->method('delete')
-            ->with($this->equalTo('entry_id = 1'));
+            ->with($this->equalTo('id = 1'));
         $this->_mapper->delete($entry);
     }
 

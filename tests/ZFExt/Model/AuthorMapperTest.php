@@ -70,10 +70,10 @@ class ZFExt_Model_AuthorMapperTest extends PHPUnit_Framework_TestCase
         );
         $this->_adapter->expects($this->once())
             ->method('quoteInto')
-            ->will($this->returnValue('author_id = 2'));
+            ->will($this->returnValue('id = 2'));
         $this->_tableGateway->expects($this->once())
             ->method('update')
-            ->with($this->equalTo($updateData), $this->equalTo('author_id = 2'));
+            ->with($this->equalTo($updateData), $this->equalTo('id = 2'));
 
         $this->_mapper->save($author);
     }
@@ -108,19 +108,19 @@ class ZFExt_Model_AuthorMapperTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($author, $entryResult);
     }
 
-    public function testDeletesAuthorUsingEntryId()
+    public function testDeletesAuthorUsingAuthorId()
     {
         $this->_adapter->expects($this->once())
             ->method('quoteInto')
-            ->with($this->equalTo('author_id = ?'), $this->equalTo(1))
-            ->will($this->returnValue('author_id = 1'));
+            ->with($this->equalTo('id = ?'), $this->equalTo(1))
+            ->will($this->returnValue('id = 1'));
         $this->_tableGateway->expects($this->once())
             ->method('delete')
-            ->with($this->equalTo('author_id = 1'));
+            ->with($this->equalTo('id = 1'));
         $this->_mapper->delete(1);
     }
 
-    public function testDeletesAuthorUsingEntryObject()
+    public function testDeletesAuthorUsingAuthorObject()
     {
         $author = new ZFExt_Model_Author(array(
             'id' => 1,
@@ -132,11 +132,11 @@ class ZFExt_Model_AuthorMapperTest extends PHPUnit_Framework_TestCase
 
         $this->_adapter->expects($this->once())
             ->method('quoteInto')
-            ->with($this->equalTo('author_id = ?'), $this->equalTo(1))
-            ->will($this->returnValue('author_id = 1'));
+            ->with($this->equalTo('id = ?'), $this->equalTo(1))
+            ->will($this->returnValue('id = 1'));
         $this->_tableGateway->expects($this->once())
             ->method('delete')
-            ->with($this->equalTo('author_id = 1'));
+            ->with($this->equalTo('id = 1'));
         $this->_mapper->delete($author);
     }
 

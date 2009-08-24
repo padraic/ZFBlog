@@ -27,7 +27,7 @@ class ZFExt_Model_AuthorMapper extends ZFExt_Model_Mapper
                 'url' => $author->url
             );
             $where = $this->_getGateway()->getAdapter()
-                ->quoteInto('author_id = ?', $author->id);
+                ->quoteInto('id = ?', $author->id);
             $this->_getGateway()->update($data, $where);
         }
     }
@@ -53,10 +53,10 @@ class ZFExt_Model_AuthorMapper extends ZFExt_Model_Mapper
     {
         if ($author instanceof ZFExt_Model_Author) {
             $where = $this->_getGateway()->getAdapter()
-                ->quoteInto('author_id = ?', $author->id);
+                ->quoteInto('id = ?', $author->id);
         } else {
             $where = $this->_getGateway()->getAdapter()
-                ->quoteInto('author_id = ?', $author);
+                ->quoteInto('id = ?', $author);
         }
         $this->_getGateway()->delete($where);
     }
