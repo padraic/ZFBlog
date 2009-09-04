@@ -20,17 +20,11 @@ class ZFExt_Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         if (isset($config['doctype'])) {
             $view->doctype($config['doctype']);
         }
-        if (isset($config['contentType'])) {
-            $view->headMeta()->appendHttpEquiv('Content-Type', $config['contentType']);
-        }
         if (isset($config['language'])) {
             $view->headMeta()->appendName('language', $config['language']);
         }
         if (isset($config['charset'])) {
             $view->headMeta()->setCharset($config['charset'], 'charset');
-        }
-        if (isset($config['title'])) {
-            $view->headTitle($config['title'], 'PREPEND');
         }
         $viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper(
             'ViewRenderer'
