@@ -7,6 +7,7 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
 require_once 'TestHelper.php';
 
 require_once 'ZFExt/Model/AllTests.php';
+require_once 'ZFExt/View/AllTests.php';
 
 class AllTests
 {
@@ -20,6 +21,7 @@ class AllTests
         $suite = new PHPUnit_Framework_TestSuite('ZFSTDE Blog Suite');
 
         $suite->addTest(ZFExt_Model_AllTests::suite());
+        $suite->addTest(ZFExt_View_AllTests::suite());
 
         return $suite;
     }

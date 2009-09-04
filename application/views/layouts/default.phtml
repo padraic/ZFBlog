@@ -1,0 +1,40 @@
+<?php echo $this->doctype() . "\n" ?>
+<html>
+<head>
+<?php
+echo $this->headMeta()->setIndent('    ') . "\n";
+echo $this->headTitle('Pádraic Brady\'s Blog')
+    ->setSeparator(' / ')->setIndent('    ') . "\n";
+echo $this->headLink()->setIndent('    ')
+    ->appendStylesheet('http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css')
+    ->appendStylesheet('http://yui.yahooapis.com/2.7.0/build/base/base-min.css') . "\n    ";
+echo $this->headScript()->prependFile(
+    'http://html5shiv.googlecode.com/svn/trunk/html5.js',
+    'text/javascript',
+    array('conditional'=>'IE')) . "\n";
+?>
+</head>
+<body>
+
+    <header>
+        <h1><a href="/">Pádraic Brady's Blog</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <?php echo $this->layout()->content ?>
+
+    <footer>
+        <p>Copyright &copy; 2009 Pádraic Brady</p>
+        <p>Powered by <a href="http://www.survivethedeepend.com">ZFBlog
+        </a></p>
+    </footer>
+
+</body>
+</html>
