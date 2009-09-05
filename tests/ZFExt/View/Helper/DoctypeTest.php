@@ -1,6 +1,6 @@
 <?php
 
-class ZFExt_View_DoctypeHelperTest extends PHPUnit_Framework_TestCase
+class ZFExt_View_Helper_DoctypeTest extends PHPUnit_Framework_TestCase
 {
 
     protected $helper = null;

@@ -1,6 +1,6 @@
 <?php
 
-class ZFExt_View_HeadMetaHelperTest extends PHPUnit_Framework_TestCase
+class ZFExt_View_Helper_HeadMetaTest extends PHPUnit_Framework_TestCase
 {
 
     protected $helper = null;

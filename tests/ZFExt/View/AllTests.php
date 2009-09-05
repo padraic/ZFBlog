@@ -4,12 +4,13 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
     define('PHPUnit_MAIN_METHOD', 'ZFExt_View_AllTests::main');
 }
 
-require_once '../../TestHelper.php';
+require_once dirname(__FILE__) . '/../../TestHelper.php';
 
-require_once 'ZFExt/View/DoctypeHelperTest.php';
-require_once 'ZFExt/View/HeadMetaHelperTest.php';
+require_once 'ZFExt/View/Helper/DoctypeTest.php';
+require_once 'ZFExt/View/Helper/HeadMetaTest.php';
+require_once 'ZFExt/View/Helper/AppendModifiedDateTest.php';
 
-class ZFExt_Model_AllTests
+class ZFExt_View_AllTests
 {
     public static function main()
     {
@@ -20,8 +21,9 @@ class ZFExt_Model_AllTests
     {
         $suite = new PHPUnit_Framework_TestSuite('ZFSTDE Blog Suite: Models');
 
-        $suite->addTestSuite('ZFExt_View_DoctypeHelperTest');
-        $suite->addTestSuite('ZFExt_View_HeadMetaHelperTest');
+        $suite->addTestSuite('ZFExt_View_Helper_DoctypeTest');
+        $suite->addTestSuite('ZFExt_View_Helper_HeadMetaTest');
+        $suite->addTestSuite('ZFExt_View_Helper_AppendModifiedDateTest');
 
         return $suite;
     }

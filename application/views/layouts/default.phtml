@@ -7,7 +7,8 @@ echo $this->headTitle('Pádraic Brady\'s Blog')
     ->setSeparator(' / ')->setIndent('    ') . "\n";
 echo $this->headLink()->setIndent('    ')
     ->appendStylesheet('http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css')
-    ->appendStylesheet('http://yui.yahooapis.com/2.7.0/build/base/base-min.css') . "\n    ";
+    ->appendStylesheet('http://yui.yahooapis.com/2.7.0/build/base/base-min.css')
+    ->appendStylesheet($this->appendModifiedDate('/css/style.css')) . "\n    ";
 echo $this->headScript()->prependFile(
     'http://html5shiv.googlecode.com/svn/trunk/html5.js',
     'text/javascript',
