@@ -1,19 +1,17 @@
-<article>
-    <header>
-        <h2>An Error Has Occurred</h2>
-    </header>
-    <div>
-    <?php if ($this->statusCode == 500): ?>
-        <p>We're truly sorry, but we cannot complete your request at this
-        time.</p>
-        <p>If it's any consolation, we have scheduled a new appointment for our
-        development team leader in Torture Chamber #7 to encourage his colleagues
-        to investigate this incident.</p>
-    <?php else: ?>
-        <p>We're truly sorry, but the page you are trying to locate does not
-        exist.</p>
-        <p>Please double check the requested URL or consult your local
-        Optometrist.</p>
-    <?php endif; ?>
-    </div>
-</article>
+<header>
+    <h2>An Error Has Occurred</h2>
+</header>
+<div>
+<?php if ($this->statusCode == 500): ?>
+    <p>We're truly sorry, but we cannot complete your request at this
+    time.</p>
+    <p>If it's any consolation, we have scheduled a new appointment for our
+    development team leader in Torture Chamber #7 to encourage his colleagues
+    to investigate this incident.</p>
+<?php else: ?>
+    <p>We're truly sorry, but the page you are trying to locate does not
+    exist.</p>
+    <p>Please double check the requested URL or consult your local
+    Optometrist.</p>
+<?php endif; ?>
+</div>

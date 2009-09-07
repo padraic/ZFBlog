@@ -1,3 +1,118 @@
+/**
+ * Basic Elements
+ */
 body {
+    font-family: Geneva, Verdana, Helvetica, sans-serif;
+}
+a:link, a:visited {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/**
+ * HTML 5 Block Display
+ *
+ * Required by most, if not all, browsers until support is added.
+ */
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+    display:block;
+}
+
+/**
+ * Page Elements
+ */
+header#hd {
+    text-align:center;
+}
+footer#ft {
+    text-align: center;
+    margin-top: 25px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+section#content {
+    border-left: 3px double lightgray;
+    padding-left: 10px;
+}
+
+/**
+ * Headers
+ */
+h1, h2, h3, h4, h5, h6 {
+    Helvetica,Arial,Calibri,sans-serif;
+}
+header#hd h1 {
+    font-size: 200%;
+    margin-bottom: 0;
+}
+header#hd h2 {
+    margin-top: 0.4em;
+    font-size: 100%;
+}
+
+/**
+ * Horizontal Header Navigation Menu
+ */
+header#hd nav {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+header#hd nav ul {
+    list-style: none;
+    margin: 0 0 0 20px;
     text-align: left;
+}
+header#hd nav li
+{
+    display: inline-block;
+    min-width: 50px;
+    margin: 0 2px 0 2px;
+}
+header#hd nav a:link, nav a:visited {
+    color: blue;
+    display: inline-block;
+    height: 20px;
+    padding: 5px 1.5em;
+    text-decoration: none;
+}
+header#hd nav a:hover {
+    background-color: lightgray;
+}
+
+/**
+ * Vertical Sidebar Menu/Links
+ */
+section nav h2 {
+    font-size: 120%;
+}
+section nav ul {
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+}
+section nav ul li
+{
+    float: left;
+    display: inline;
+    margin: 0;
+}
+
+/**
+ * Article related styling
+ */
+article header {
+    margin-bottom: 1em;
+}
+article header h2 {
+    border-bottom: 1px dashed gray;
+    font-size: 130%;
+    color: green;
+    margin-bottom: 0.5em;
+}
+article header p {
+    font-style: italic;
 }

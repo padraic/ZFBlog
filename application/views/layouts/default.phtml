@@ -16,26 +16,50 @@ echo $this->headScript()->prependFile(
 ?>
 </head>
 <body>
+    <div id="doc" class="yui-t1">
 
-    <header>
-        <h1><a href="/">Pádraic Brady's Blog</a></h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header id="hd" role="banner">
+            <hgroup>
+                <h1><a href="/">Pádraic Brady's Blog</a></h1>
+                <h2>Musings On PHP And Zend Framework</h2>
+            </hgroup>
+            <nav role="navigation">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <?php echo $this->layout()->content ?>
+        <div id="bd">
+            <div id="yui-main">
+                <div class="yui-b" role="main">
+                    <section id ="content" class="yui-g">
+                        <?php echo $this->layout()->content ?>
+                    </section>
+                </div>
+            </div>
+            <section class="yui-b">
+                <nav role="navigation" aria-labelledby="leftnav-label">
+                    <h2 id="leftnav-label">External Links</h2>
+                    <ul>
+                        <li><a href="#">Survive The Deep End</a></li>
+                        <li><a href="#">Zend Framework</a></li>
+                        <li><a href="#">Planet-PHP</a></li>
+                        <li><a href="#">I'm on Twitter!</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
 
-    <footer>
-        <p>Copyright &copy; 2009 Pádraic Brady</p>
-        <p>Powered by <a href="http://www.survivethedeepend.com">ZFBlog
-        </a></p>
-    </footer>
+        <footer id="ft" role="contentinfo">
+            <p>Copyright &copy; 2009 Pádraic Brady</p>
+            <p>Powered by <a href="http://www.survivethedeepend.com">ZFBlog
+            </a></p>
+        </footer>
 
+    </div>
 </body>
 </html>
