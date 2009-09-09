@@ -9,6 +9,7 @@ require_once dirname(__FILE__) . '/../../TestHelper.php';
 require_once 'ZFExt/View/Helper/DoctypeTest.php';
 require_once 'ZFExt/View/Helper/HeadMetaTest.php';
 require_once 'ZFExt/View/Helper/AppendModifiedDateTest.php';
+require_once 'ZFExt/View/Helper/IncludeModifiedDateTest.php';
 
 class ZFExt_View_AllTests
 {
@@ -24,6 +25,7 @@ class ZFExt_View_AllTests
         $suite->addTestSuite('ZFExt_View_Helper_DoctypeTest');
         $suite->addTestSuite('ZFExt_View_Helper_HeadMetaTest');
         $suite->addTestSuite('ZFExt_View_Helper_AppendModifiedDateTest');
+        $suite->addTestSuite('ZFExt_View_Helper_IncludeModifiedDateTest');
 
         return $suite;
     }
